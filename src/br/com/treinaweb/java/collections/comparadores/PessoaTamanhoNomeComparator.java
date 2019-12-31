@@ -15,7 +15,7 @@ public class PessoaTamanhoNomeComparator implements Comparator<Pessoa>{
 		//-1: o1 < o2
 		if (o1.getNome().length() < o2.getNome().length()) {
 			return -1;
-		}
+		} 
 		//1: o1 > o2
 		return 1;
 	}

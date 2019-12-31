@@ -27,6 +27,11 @@ public class Pessoa implements Comparable<Pessoa> {
 		this.nome = nome;
 	}
 	
+	@Override
+	public String toString() {
+		return "Pessoa [id=" + id + ", nome=" + nome + "]";
+	}
+	
 	
 
 	@Override
@@ -40,30 +45,32 @@ public class Pessoa implements Comparable<Pessoa> {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 		Pessoa other = (Pessoa) obj;
-		if (id != other.id)
+		if (id != other.id) {
 			return false;
+		}
 		if (nome == null) {
 			if (other.nome != null)
 				return false;
-		} else if (!nome.equals(other.nome))
+		} else if (!nome.equals(other.nome)) {
 			return false;
+		}
 		return true;
 	}
 
-	@Override
-	public String toString() {
-		return "Pessoa [id=" + id + ", nome=" + nome + "]";
-	}
+	
 
 	@Override
-	public int compareTo(Pessoa o) {
+	public int compareTo(Pessoa o) { 
 		//0: os objetos são considerados iguais
 		if (this.getId() == o.getId()) {
 			return 0;

@@ -20,6 +20,15 @@ public class Main {
 		Collections.sort(pessoas, new PessoaTamanhoNomeComparator());
 		System.out.println(pessoas);
 		
+		pessoas.sort((o1, o2 ) -> {
+			if (o1.getNome().length() == o2.getNome().length()) {
+				return 0;
+			} else if (o1.getNome().length() < o2.getNome().length()) {
+				return -1;
+			}
+			return 1;
+		});
+		
 	/* ***************************************************
 	*********** Varrendo a lista com o FOR *********/	
 		
