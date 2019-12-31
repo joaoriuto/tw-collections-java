@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+import br.com.treinaweb.java.collections.comparadores.PessoaTamanhoNomeComparator;
 import br.com.treinaweb.java.collections.models.Pessoa;
 
 public class Main {
@@ -12,11 +13,11 @@ public class Main {
 	public static void main(String[] args) {
 		List<Pessoa> pessoas = new ArrayList<Pessoa>();
 		
-		pessoas.add(new Pessoa(1, "TreinaWeb 1"));
-		pessoas.add(new Pessoa(4, "TreinaWeb 2"));
+		pessoas.add(new Pessoa(1, "TreinaW 1"));
+		pessoas.add(new Pessoa(4, "TreinaWe 2"));
 		pessoas.add(new Pessoa(3, "Treinaweb 3"));
 		
-		Collections.sort(pessoas);
+		Collections.sort(pessoas, new PessoaTamanhoNomeComparator());
 		System.out.println(pessoas);
 		
 	/* ***************************************************
