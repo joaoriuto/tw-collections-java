@@ -1,6 +1,7 @@
 package br.com.treinaweb.java.collections;
 
-import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 import br.com.treinaweb.java.collections.models.Pessoa;
 
@@ -8,7 +9,7 @@ public class MainSet2 {
 
 	public static void main(String[] args) {
 		
-		HashSet<Pessoa> pessoas = new HashSet<Pessoa>();
+		Set<Pessoa> pessoas = new LinkedHashSet<Pessoa>();
 		
 		pessoas.add(new Pessoa(1, "TreinaWeb 1"));
 		pessoas.add(new Pessoa(2, "TreinaWeb 2"));
